@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dipu Babba Shop — Mobile Accessories</title>
+  <meta name="description" content="Dipu Babba Shop - Mobile accessories: covers, chargers, earphones, powerbanks and more." />
+  <style>
+    :root{
+      --brand:#0b61d6; /* blue */
+      --accent:#0f76ff;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --shadow: 0 6px 18px rgba(12, 35, 80, 0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b1a2b}
+    header{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;padding:14px 20px;position:sticky;top:0;z-index:40}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;font-size:20px}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:18px;font-weight:600}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .hero-card{background:var(--card);padding:28px;border-radius:14px;box-shadow:var(--shadow)}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin-top:8px}
+    .cta{margin-top:12px;background:var(--brand);color:#fff;padding:12px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+    .card{background:var(--card);border-radius:12px;padding:12px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+    .card h4{margin:10px 0 6px 0;font-size:15px}
+    .price{font-weight:700}
+    .btn{padding:8px 10px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-outline{background:transparent;border:1px solid #e6eefc;color:var(--brand)}
+
+    .cart{position:fixed;right:18px;bottom:18px;background:var(--card);width:360px;max-width:92vw;border-radius:12px;padding:12px;box-shadow:0 20px 50px rgba(2,6,23,0.15)}
+    .cart h3{margin:0 0 10px 0}
+    .cart-list{max-height:260px;overflow:auto;margin-bottom:10px}
+    .cart-row{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px dashed #eee}
+    .cart-row img{width:56px;height:56px;object-fit:cover;border-radius:6px}
+    .cart-row .meta{flex:1}
+    .qty{display:flex;gap:6px;align-items:center}
+    .total{display:flex;justify-content:space-between;font-weight:800;margin-top:10px}
+    .checkout{background:var(--accent);color:#fff;padding:10px;border-radius:10px;border:none;width:100%;font-weight:800;margin-top:10px}
+
+    footer{margin-top:36px;padding:24px 0;color:var(--muted);text-align:center}
+
+    /* pages */
+    .section{margin-top:34px}
+    .about,.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eefc}
+
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .about,.contact{grid-template-columns:1fr}
+      nav a{margin-left:10px}
+    }
+    @media(max-width:520px){
+      .product-grid{grid-template-columns:1fr}
+      .brand{font-size:16px}
+      header{padding:10px}
+      .cart{width:92vw;right:4%;left:4%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">Dipu Babba Shop</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-card">
+        <h1>Best Mobile Accessories — Fast Delivery</h1>
+        <p>Discover covers, chargers, earphones, powerbanks and screen protectors. Quality products at pocket‑friendly prices.</p>
+        <button class="cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+        <div style="margin-top:18px;color:var(--muted);font-size:13px">Free shipping on orders above ₹999 • Easy returns • Secure payments</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="hero-card" style="display:flex;gap:12px;align-items:center;">
+          <img src="https://via.placeholder.com/120x120?text=Earbuds" alt="earbuds" style="width:120px;height:120px;border-radius:8px;object-fit:cover">
+          <div>
+            <strong>Top Pick: Wireless Earbuds</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Crisp sound, long battery life — ₹999</div>
+          </div>
+        </div>
+        <div class="hero-card" style="display:flex;gap:12px;align-items:center;">
+          <img src="https://via.placeholder.com/120x120?text=Charger" alt="charger" style="width:120px;height:120px;border-radius:8px;object-fit:cover">
+          <div>
+            <strong>Fast Charger 30W</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Safe charging for all phones — ₹699</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <h2>Products</h2>
+      <div class="product-grid" id="productGrid">
+        <!-- Products will be injected by JS -->
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+        <h3>About Dipu Babba Shop</h3>
+        <p style="color:var(--muted)">Dipu Babba Shop brings high quality mobile accessories at affordable prices. We focus on durability, customer satisfaction, and fast delivery. Started with a small dream to provide the best accessories, today we serve thousands of happy customers.</p>
+      </div>
+      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+        <h3>Our Promise</h3>
+        <ul style="color:var(--muted);margin:8px 0 0 18px">
+          <li>Genuine quality products</li>
+          <li>30 days return policy</li>
+          <li>Secure payments and fast shipping</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+        <h3>Contact Us</h3>
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <input required id="name" placeholder="Your name">
+          <input required id="email" type="email" placeholder="Your email">
+          <textarea required id="message" rows="5" placeholder="Message"></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+        <h3>Visit Us</h3>
+        <p style="color:var(--muted)">Dipu Babba Shop<br>123 Market Road, Your City<br>Mon–Sat: 10:00–19:00</p>
+        <p style="margin-top:12px">Follow us on social media:</p>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <div style="background:#eef6ff;padding:8px;border-radius:8px">Facebook</div>
+          <div style="background:#eef6ff;padding:8px;border-radius:8px">Instagram</div>
+          <div style="background:#eef6ff;padding:8px;border-radius:8px">WhatsApp</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Dipu Babba Shop — All rights reserved
+    </footer>
+  </main>
+
+  <!-- Cart (hidden until needed) -->
+  <aside id="cart" class="cart" aria-hidden="true" style="display:none">
+    <h3>Your Cart</h3>
+    <div class="cart-list" id="cartList"></div>
+    <div class="total"><div>Total</div><div id="cartTotal">₹0</div></div>
+    <button class="checkout" onclick="checkout()">Checkout</button>
+  </aside>
+
+  <script>
+    const PRODUCTS = [
+      {id:1,name:'Classic Silicone Cover - Black',price:249,img:'https://via.placeholder.com/400x300?text=Cover+1'},
+      {id:2,name:'Slim Leather Cover - Blue',price:399,img:'https://via.placeholder.com/400x300?text=Cover+2'},
+      {id:3,name:'Wireless Earbuds',price:999,img:'https://via.placeholder.com/400x300?text=Earbuds'},
+      {id:4,name:'Fast Charger 30W',price:699,img:'https://via.placeholder.com/400x300?text=Charger'},
+      {id:5,name:'USB-C to C Cable (1m)',price:199,img:'https://via.placeholder.com/400x300?text=Cable'},
+      {id:6,name:'Power Bank 10000mAh',price:1199,img:'https://via.placeholder.com/400x300?text=Powerbank'},
+      {id:7,name:'Tempered Glass Screen Protector',price:149,img:'https://via.placeholder.com/400x300?text=Protector'},
+      {id:8,name:'MagSafe Style Ring Holder',price:299,img:'https://via.placeholder.com/400x300?text=Ring+Holder'},
+      {id:9,name:'Car Charger Dual Port',price:499,img:'https://via.placeholder.com/400x300?text=Car+Charger'},
+      {id:10,name:'Bluetooth Speaker Mini',price:799,img:'https://via.placeholder.com/400x300?text=Speaker'},
+      {id:11,name:'Gaming Trigger Buttons',price:349,img:'https://via.placeholder.com/400x300?text=Gaming+Trigger'},
+      {id:12,name:'Phone Cleaning Kit',price:129,img:'https://via.placeholder.com/400x300?text=Cleaning+Kit'}
+    ];
+
+    // render products
+    const grid = document.getElementById('productGrid');
+    function renderProducts(){
+      grid.innerHTML = '';
+      PRODUCTS.forEach(p => {
+        const card = document.createElement('div'); card.className='card';
+        card.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h4>${p.name}</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+            <div>
+              <div class="price">₹${p.price}</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-outline" onclick="viewDetails(${p.id})">View</button>
+              <button class="btn btn-primary" onclick="addToCart(${p.id})">Add to Cart</button>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+      })
+    }
+
+    // Cart logic (localStorage)
+    let cart = JSON.parse(localStorage.getItem('db_cart')||'[]');
+    const cartEl = document.getElementById('cart');
+    const cartList = document.getElementById('cartList');
+    const cartTotalEl = document.getElementById('cartTotal');
+
+    function saveCart(){ localStorage.setItem('db_cart', JSON.stringify(cart)); renderCart(); }
+    function addToCart(id){
+      const item = PRODUCTS.find(p=>p.id===id); if(!item) return;
+      const found = cart.find(c=>c.id===id);
+      if(found) found.qty++; else cart.push({id:item.id,name:item.name,price:item.price,img:item.img,qty:1});
+      saveCart(); showCart();
+    }
+    function removeFromCart(id){ cart = cart.filter(c=>c.id!==id); saveCart(); }
+    function changeQty(id,delta){ const it = cart.find(c=>c.id===id); if(!it) return; it.qty+=delta; if(it.qty<1) removeFromCart(id); saveCart(); }
+
+    function renderCart(){
+      if(cart.length===0){ cartList.innerHTML = '<div style="color:var(--muted)">Your cart is empty</div>'; cartTotalEl.textContent='₹0'; return; }
+      cartList.innerHTML = '';
+      let total=0;
+      cart.forEach(c=>{
+        total += c.price*c.qty;
+        const row = document.createElement('div'); row.className='cart-row';
+        row.innerHTML = `
+          <img src="${c.img}" alt="${c.name}">
+          <div class="meta">
+            <div style="font-weight:700">${c.name}</div>
+            <div style="color:var(--muted);font-size:13px">₹${c.price} x ${c.qty}</div>
+          </div>
+          <div class="qty">
+            <button class="btn" onclick="changeQty(${c.id},-1)">-</button>
+            <div style="min-width:22px;text-align:center">${c.qty}</div>
+            <button class="btn" onclick="changeQty(${c.id},1)">+</button>
+            <button class="btn" style="background:transparent;color:#d00;border:none;margin-left:6px" onclick="removeFromCart(${c.id})">✕</button>
+          </div>
+        `;
+        cartList.appendChild(row);
+      });
+      cartTotalEl.textContent = '₹' + total;
+    }
+
+    function showCart(){ cartEl.style.display='block'; cartEl.setAttribute('aria-hidden','false'); renderCart(); }
+    function hideCart(){ cartEl.style.display='none'; cartEl.setAttribute('aria-hidden','true'); }
+
+    function checkout(){
+      if(cart.length===0){ alert('Cart is empty'); return; }
+      // simple demo checkout
+      alert('Checkout demo — order total: ' + cartTotalEl.textContent + '\n(This is a demo. Integrate a real payment gateway to accept payments.)');
+      cart = []; saveCart(); hideCart();
+    }
+
+    function viewDetails(id){ const p = PRODUCTS.find(x=>x.id===id); if(!p) return; alert(p.name + '\n\nPrice: ₹' + p.price + '\n\nThis is a demo product.'); }
+
+    function handleContact(e){ e.preventDefault(); const name=document.getElementById('name').value; const email=document.getElementById('email').value; const msg=document.getElementById('message').value; if(!name||!email||!msg){alert('Please fill all fields');return;} alert('Thanks ' + name + '! Your message was received. (Demo — no backend)'); e.target.reset(); }
+
+    // init
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderProducts(); renderCart();
+
+    // small UX: open cart when user adds product
+    window.addEventListener('storage', ()=>{ cart = JSON.parse(localStorage.getItem('db_cart')||'[]'); renderCart(); });
+
+    // keyboard shortcut: press C to toggle cart
+    window.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='c'){ if(cartEl.style.display==='none') showCart(); else hideCart(); } });
+  </script>
+</body>
+</html>
