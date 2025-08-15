@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dipu Babba Shop — Mobile Accessories</title>
-  <meta name="description" content="Dipu Babba Shop - Mobile accessories: covers, chargers, earphones, powerbanks and more." />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Dipu Babba Shop — Mobile Accessories</title>
+<meta content="Dipu Babba Shop - Mobile accessories: covers, chargers, earphones, powerbanks and more." name="description"/>
+<style>
     :root{
       --brand:#0b61d6; /* blue */
       --accent:#0f76ff;
@@ -70,103 +71,96 @@
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="nav">
-      <div class="brand">Dipu Babba Shop</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="home" class="hero">
-      <div class="hero-card">
-        <h1>Best Mobile Accessories — Fast Delivery</h1>
-        <p>Discover covers, chargers, earphones, powerbanks and screen protectors. Quality products at pocket‑friendly prices.</p>
-        <button class="cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
-        <div style="margin-top:18px;color:var(--muted);font-size:13px">Free shipping on orders above ₹999 • Easy returns • Secure payments</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="hero-card" style="display:flex;gap:12px;align-items:center;">
-          <img src="https://via.placeholder.com/120x120?text=Earbuds" alt="earbuds" style="width:120px;height:120px;border-radius:8px;object-fit:cover">
-          <div>
-            <strong>Top Pick: Wireless Earbuds</strong>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">Crisp sound, long battery life — ₹999</div>
-          </div>
-        </div>
-        <div class="hero-card" style="display:flex;gap:12px;align-items:center;">
-          <img src="https://via.placeholder.com/120x120?text=Charger" alt="charger" style="width:120px;height:120px;border-radius:8px;object-fit:cover">
-          <div>
-            <strong>Fast Charger 30W</strong>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">Safe charging for all phones — ₹699</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="products" class="section">
-      <h2>Products</h2>
-      <div class="product-grid" id="productGrid">
-        <!-- Products will be injected by JS -->
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
-        <h3>About Dipu Babba Shop</h3>
-        <p style="color:var(--muted)">Dipu Babba Shop brings high quality mobile accessories at affordable prices. We focus on durability, customer satisfaction, and fast delivery. Started with a small dream to provide the best accessories, today we serve thousands of happy customers.</p>
-      </div>
-      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
-        <h3>Our Promise</h3>
-        <ul style="color:var(--muted);margin:8px 0 0 18px">
-          <li>Genuine quality products</li>
-          <li>30 days return policy</li>
-          <li>Secure payments and fast shipping</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
-        <h3>Contact Us</h3>
-        <form id="contactForm" onsubmit="handleContact(event)">
-          <input required id="name" placeholder="Your name">
-          <input required id="email" type="email" placeholder="Your email">
-          <textarea required id="message" rows="5" placeholder="Message"></textarea>
-          <button class="btn btn-primary" type="submit">Send Message</button>
-        </form>
-      </div>
-      <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
-        <h3>Visit Us</h3>
-        <p style="color:var(--muted)">Dipu Babba Shop<br>123 Market Road, Your City<br>Mon–Sat: 10:00–19:00</p>
-        <p style="margin-top:12px">Follow us on social media:</p>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <div style="background:#eef6ff;padding:8px;border-radius:8px">Facebook</div>
-          <div style="background:#eef6ff;padding:8px;border-radius:8px">Instagram</div>
-          <div style="background:#eef6ff;padding:8px;border-radius:8px">WhatsApp</div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
+<body><div class="shop-logo" style="text-align:center; margin-top:20px;"><img alt="Dipu Baba Shop Logo" src="logo.png" style="width:120px; height:auto; border-radius:50%;"/><h2 style="margin-top:10px; font-family:Arial; color:#333;">Baba Ji</h2></div>
+<header>
+<div class="nav">
+<div class="brand">Dipu Babba Shop</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container">
+<section class="hero" id="home">
+<div class="hero-card">
+<h1>Best Mobile Accessories — Fast Delivery</h1>
+<p>Discover covers, chargers, earphones, powerbanks and screen protectors. Quality products at pocket‑friendly prices.</p>
+<button class="cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+<div style="margin-top:18px;color:var(--muted);font-size:13px">Free shipping on orders above ₹999 • Easy returns • Secure payments</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;">
+<div class="hero-card" style="display:flex;gap:12px;align-items:center;">
+<img alt="earbuds" src="https://via.placeholder.com/120x120?text=Earbuds" style="width:120px;height:120px;border-radius:8px;object-fit:cover"/>
+<div>
+<strong>Top Pick: Wireless Earbuds</strong>
+<div style="color:var(--muted);font-size:13px;margin-top:6px">Crisp sound, long battery life — ₹999</div>
+</div>
+</div>
+<div class="hero-card" style="display:flex;gap:12px;align-items:center;">
+<img alt="charger" src="https://via.placeholder.com/120x120?text=Charger" style="width:120px;height:120px;border-radius:8px;object-fit:cover"/>
+<div>
+<strong>Fast Charger 30W</strong>
+<div style="color:var(--muted);font-size:13px;margin-top:6px">Safe charging for all phones — ₹699</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="products">
+<h2>Products</h2>
+<div class="product-grid" id="productGrid">
+<!-- Products will be injected by JS -->
+</div>
+</section>
+<section class="section about" id="about">
+<div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+<h3>About Dipu Babba Shop</h3>
+<p style="color:var(--muted)">Dipu Babba Shop brings high quality mobile accessories at affordable prices. We focus on durability, customer satisfaction, and fast delivery. Started with a small dream to provide the best accessories, today we serve thousands of happy customers.</p>
+</div>
+<div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+<h3>Our Promise</h3>
+<ul style="color:var(--muted);margin:8px 0 0 18px">
+<li>Genuine quality products</li>
+<li>30 days return policy</li>
+<li>Secure payments and fast shipping</li>
+</ul>
+</div>
+</section>
+<section class="section contact" id="contact">
+<div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+<h3>Contact Us</h3>
+<form id="contactForm" onsubmit="handleContact(event)">
+<input id="name" placeholder="Your name" required=""/>
+<input id="email" placeholder="Your email" required="" type="email"/>
+<textarea id="message" placeholder="Message" required="" rows="5"></textarea>
+<button class="btn btn-primary" type="submit">Send Message</button>
+</form>
+</div>
+<div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)">
+<h3>Visit Us</h3>
+<p style="color:var(--muted)">Dipu Babba Shop<br/>123 Market Road, Your City<br/>Mon–Sat: 10:00–19:00</p>
+<p style="margin-top:12px">Follow us on social media:</p>
+<div style="display:flex;gap:8px;margin-top:8px">
+<div style="background:#eef6ff;padding:8px;border-radius:8px">Facebook</div>
+<div style="background:#eef6ff;padding:8px;border-radius:8px">Instagram</div>
+<div style="background:#eef6ff;padding:8px;border-radius:8px">WhatsApp</div>
+</div>
+</div>
+</section>
+<footer>
       © <span id="year"></span> Dipu Babba Shop — All rights reserved
     </footer>
-  </main>
-
-  <!-- Cart (hidden until needed) -->
-  <aside id="cart" class="cart" aria-hidden="true" style="display:none">
-    <h3>Your Cart</h3>
-    <div class="cart-list" id="cartList"></div>
-    <div class="total"><div>Total</div><div id="cartTotal">₹0</div></div>
-    <button class="checkout" onclick="checkout()">Checkout</button>
-  </aside>
-
-  <script>
+</main>
+<!-- Cart (hidden until needed) -->
+<aside aria-hidden="true" class="cart" id="cart" style="display:none">
+<h3>Your Cart</h3>
+<div class="cart-list" id="cartList"></div>
+<div class="total"><div>Total</div><div id="cartTotal">₹0</div></div>
+<button class="checkout" onclick="checkout()">Checkout</button>
+</aside>
+<script>
     const PRODUCTS = [
       {id:1,name:'Classic Silicone Cover - Black',price:249,img:'https://via.placeholder.com/400x300?text=Cover+1'},
       {id:2,name:'Slim Leather Cover - Blue',price:399,img:'https://via.placeholder.com/400x300?text=Cover+2'},
